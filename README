@@ -1,0 +1,27 @@
+###-----
+###
+### Nicolas CARREZ (FRA)
+### n.carrez.dev@gmail.com
+###
+###-----
+### The code in this repository is NOT free for use. 
+### You can read the code but cannot copy it. 
+###-----
+### For more informations please contact me.
+###-----
+
+1. Projects :
+- OwnEve : 
+  -- BaseTypes 
+     - Array
+     - EventData
+     - Strutures
+  -- BaseClasses
+     - Thread
+  -- BaseFunctions
+
+- OwnDB :
+  -- Database
+
+- OwnVC :
+  -- VersionControl
