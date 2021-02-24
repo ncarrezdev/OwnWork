@@ -11,17 +11,28 @@
 ###-----
 
 1. Projects :
-- OwnEve : 
-  -- BaseTypes 
-     - Array
-     - EventData
-     - Strutures
-  -- BaseClasses
-     - Thread
-  -- BaseFunctions
+- NewEve : 
+  - Array
+  - Decorators
+  - Enums
+  - EventData
+  - Exceptions
+  - OwnObject
+  - Point
+  - PointData
+  - Thread
+  - TypedData
+  -- Base Functions :
+    - flatten_lists
+    - load_ui
+
+- OwnApp :
+  -- Ratio
+
+- OwnCompress :
+
+- OwnCrypt :
 
 - OwnDB :
-  -- Database
 
 - OwnVC :
-  -- VersionControl
