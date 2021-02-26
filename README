@@ -9,6 +9,17 @@
 ### For more informations please contact me.
 ###-----
 
+The main objective is to make my own sdk, from native Python (as much as possible).
+This sdk will be used to build new apps.
+
+0. Dependancy :
+- PySide2
+- os
+- sys
+- enum
+- threading
+- time
+
 1. Projects :
 - NewEve : 
   - Array
