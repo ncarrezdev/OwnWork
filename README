@@ -4,8 +4,7 @@
 ### n.carrez.dev@gmail.com
 ###
 ###-----
-### The code in this repository is NOT free for use. 
-### You can read the code but cannot copy it. 
+### The code in this repository is NOT free for use.
 ###-----
 ### For more informations please contact me.
 ###-----
@@ -32,7 +31,11 @@
 - OwnCompress :
 
 - OwnCrypt :
+  - Crypto
 
 - OwnDB :
+  - Database
+  - Engine
+  - Table
 
 - OwnVC :

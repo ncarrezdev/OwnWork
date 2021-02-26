@@ -1,8 +1,9 @@
 from NewEve import Array
 from NewEve import Exceptions
 from NewEve import E_DATA_TYPE
+from NewEve import E_UNIQUE_TYPE
 from NewEve import check_type
-from OwnDB  import Table, ColumnInfo
+from Table  import Table, ColumnInfo
 
 class DatabaseException(Exceptions):pass
 
@@ -69,15 +70,16 @@ class Database(Array):
     
     def save(self, folder_path):
         import os
-        folder_name = self.name
-        folder_path = os.path.join(folder_path, folder_name)
-        os.mkdir(folder_path)
+        try:
+            os.mkdir(folder_path)
+        except:pass
         for table in self:
             file_name = table.name
             file_to_write = open(os.path.join(folder_path, file_name+'.db'), 'w')
             str_to_write = ''
             for column in table[0]:
                 str_to_write += 'OwnDBcname='+str(column.name)+'-OwnDB'
+                str_to_write += 'OwnDBctype='+str(column.type.__name__)+'-OwnDB'
                 str_to_write += 'OwnDBcdefault='+str(column.default)+'-OwnDB'
                 str_to_write += 'OwnDBcunique='+str(column.unique)+'-OwnDB'
                 str_to_write += '\n'
@@ -103,14 +105,20 @@ class Database(Array):
             split_index = buffer.index('#---\n')
             for line in buffer[:split_index]:
                 name    = line.split('OwnDBcname=')[1].split('-OwnDB')[0]
-                default = line.split('OwnDBcdefault=')[1].split('-OwnDB')[0]
-                unique  = line.split('OwnDBcunique=')[1].split('-OwnDB')[0]
-                column = ColumnInfo(name, default, unique)
+                dtype   = eval(line.split('OwnDBctype=')[1].split('-OwnDB')[0])
+                default = dtype(line.split('OwnDBcdefault=')[1].split('-OwnDB')[0])
+                unique  = E_UNIQUE_TYPE[line.split('OwnDBcunique=')[1].split('-OwnDB')[0].split('.')[1]]
+                column = ColumnInfo(name, dtype, default, unique)
                 new_table.append_col(column)
 
             for line in buffer[split_index+1:]:
-                row = []
-                for data in line.split('OwnDBrdata='):
-                    row.append(data.split('-OwnDB')[0])
+                row   = []
+                datas = []
+                for val in line.split('OwnDBrdata=')[1:]:
+                    val = val.split('-OwnDB')[0]
+                    datas.append(val)
+
+                for i in range(new_table[0].size):
+                    row.append(new_table[0][i].type(datas[i]))
                 new_table.append_row(row)
             self.append(new_table)

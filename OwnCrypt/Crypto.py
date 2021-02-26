@@ -1,5 +1,3 @@
-from Exceptions import Exceptions
-
 class Crypto():
     def __init__(self, complexity:int = 1):
         self.__complexity = complexity

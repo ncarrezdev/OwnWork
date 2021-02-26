@@ -1,19 +1,22 @@
 from NewEve import Array
+from NewEve import OwnSimpleObject
 from NewEve import Exceptions
 from NewEve import E_UNIQUE_TYPE
 from NewEve import E_DATA_TYPE
 from NewEve import check_type
 
 
-class ColumnInfo():
+class ColumnInfo(OwnSimpleObject):
     def __init__(
         self, 
         name='', 
-        default=None, 
+        data_type=None,
+        data_default=None, 
         unique_type:E_UNIQUE_TYPE=E_UNIQUE_TYPE.NONE
         ):
         self.__name    = name
-        self.__default = default
+        self.__type    = data_type or type(data_default)
+        self.__default = data_default
         self.__unique  = unique_type
     
     @property
@@ -23,6 +26,10 @@ class ColumnInfo():
     @name.setter
     def name(self, new_name):
         self.__name = new_name
+
+    @property
+    def type(self):
+        return self.__type
     
     @property
     def default(self):
@@ -35,10 +42,6 @@ class ColumnInfo():
     @property
     def unique(self):
         return self.__unique
-    
-    @unique.setter
-    def unique(self, new_unique:E_UNIQUE_TYPE):
-        self.__unique = new_unique
 
 
 class TableException(Exceptions):pass
