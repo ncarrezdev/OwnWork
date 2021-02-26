@@ -1,5 +1,5 @@
 from NewEve import load_ui
-from OwnDB  import *
+from OwnDB  import Database, Table, ColumnInfo
 
 class Ratio():
     def __init__(self):
