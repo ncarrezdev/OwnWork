@@ -1,7 +1,0 @@
-OwnDBcname=col1-OwnDBOwnDBctype=int-OwnDBOwnDBcdefault=0-OwnDBOwnDBcunique=E_UNIQUE_TYPE.NONE-OwnDB
-OwnDBcname=col2-OwnDBOwnDBctype=float-OwnDBOwnDBcdefault=0.0-OwnDBOwnDBcunique=E_UNIQUE_TYPE.NONE-OwnDB
-OwnDBcname=col3-OwnDBOwnDBctype=int-OwnDBOwnDBcdefault=0-OwnDBOwnDBcunique=E_UNIQUE_TYPE.NONE-OwnDB
-#---
-OwnDBrdata=0-OwnDBOwnDBrdata=1.0-OwnDBOwnDBrdata=2-OwnDB
-OwnDBrdata=3-OwnDBOwnDBrdata=4.0-OwnDBOwnDBrdata=5-OwnDB
-OwnDBrdata=6-OwnDBOwnDBrdata=7.0-OwnDBOwnDBrdata=8-OwnDB
