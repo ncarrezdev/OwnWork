@@ -21,7 +21,7 @@ This sdk will be used to build new apps.
 - time
 
 1. Projects :
-- NewEve : 
+- NewEve : (SDK)
   - Array
   - Decorators
   - Enums
@@ -36,17 +36,17 @@ This sdk will be used to build new apps.
     - flatten_lists
     - load_ui
 
-- OwnApp :
+- OwnApp : (Application)
   -- Ratio
 
-- OwnCompress :
+- OwnCompress : (Compression)
 
-- OwnCrypt :
+- OwnCrypt : (Cryptography)
   - Crypto
 
-- OwnDB :
+- OwnDB : (Database)
   - Database
   - Engine
   - Table
 
-- OwnVC :
+- OwnVC : (Version Control)
