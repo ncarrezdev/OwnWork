@@ -30,3 +30,12 @@ def check_type(f):
                     raise Exceptions.TypeException(l_type, o_type)
         return f(*args, **kwargs)
     return decorator
+
+def check_time(f):
+    def decorator(*args, **kwargs):
+        import time
+        start_time = time.time()
+        res = f(*args, **kwargs)
+        print(f.__name__, '{0:.5f}'.format(time.time() - start_time))
+        return res
+    return decorator

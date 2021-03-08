@@ -5,12 +5,13 @@ Copyright (c) Nicolas CARREZ
 The code in this repository is NOT free for use.
 Please read the LICENCE file before making any use of the code below
 '''
-from NewEve import E_UNIQUE_TYPE
-from OwnDB import Database
+from OwnCompress import *
 if __name__ == '__main__':
-    print(str.__name__)
-    print(eval('str'))
-    m_db = Database()
-    m_db.load('./m_db')
-    print(m_db)
-    m_db.save('./m_db2')
+    ## Comptage bit a bit
+    print(int('00000000',2))
+    print(int('00000001',2))
+    print(int('00000010',2))
+
+    #print(map_char_quantity("Hello World!"))
+    #print(sort_by_quantity(map_char_quantity("Hello World!")))
+    print(get_compression_map("Hello World!"))

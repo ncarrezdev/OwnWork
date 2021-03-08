@@ -12,8 +12,4 @@ if(this_file_path not in sys.path):
 
 #---------------------------------------------------------
 
-from flatten_lists   import *
-from get_file_list   import *
-from get_folder_list import *
-from get_user_path   import *
-from load_ui         import *
+from Compresso import *

@@ -28,10 +28,10 @@ class Crypto():
             for i in range(len(str_to_hide)):
                 int_str.append(ord(str_to_hide[i]))
                 rand = randrange(0,256)
+                excluded = list(range(0,32)) + [127] + list(range(244,255))
                 while(
-                    (rand + int_str[i])%256 <= 32  or
-                    (rand + int_str[i])%256 == 127 or
-                    (rand + int_str[i])%256 >= 244
+                    (rand + int_str[i])%256 in excluded  or
+                    rand in excluded
                     ):
                     rand = randrange(0,256)
                 key.append(rand)

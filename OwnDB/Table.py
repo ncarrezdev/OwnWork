@@ -29,10 +29,6 @@ class ColumnInfo(OwnSimpleObject):
     @property
     def name(self):
         return self.__name
-    
-    @name.setter
-    def name(self, new_name):
-        self.__name = new_name
 
     @property
     def type(self):
@@ -41,10 +37,6 @@ class ColumnInfo(OwnSimpleObject):
     @property
     def default(self):
         return self.__default
-    
-    @default.setter
-    def default(self, new_default):
-        self.__default = new_default
     
     @property
     def unique(self):
