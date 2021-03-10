@@ -9,7 +9,7 @@ from NewEve import Array
 from NewEve import Exceptions
 from NewEve import E_DATA_TYPE
 from NewEve import E_UNIQUE_TYPE
-from NewEve import check_type
+from NewEve import check_type, check_time
 from Table  import Table, ColumnInfo
 
 class DatabaseException(Exceptions):pass
@@ -74,7 +74,7 @@ class Database(Array):
     def __indexes__(self, name):
         return [i for i in range(self.size) if name == self[i].name]
         
-    
+    @check_time
     def save(self, folder_path):
         import os
         try:
@@ -96,7 +96,8 @@ class Database(Array):
                     str_to_write += 'OwnDBrdata='+str(data)+'-OwnDB'
                 str_to_write += '\n'
             file_to_write.write(str_to_write[:-1])
-        
+
+    @check_time  
     def load(self, folder_path):
         import os
         folder_name = os.path.basename(os.path.normpath(folder_path))

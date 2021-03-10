@@ -14,4 +14,13 @@ if __name__ == '__main__':
 
     #print(map_char_quantity("Hello World!"))
     #print(sort_by_quantity(map_char_quantity("Hello World!")))
-    print(get_compression_map("Hello World!"))
+    str_to_compress = "nfogbnubqO GQFN<FBGQOFGBQIBDV QEBFIqdfq isbdqpfgbqdjkfnq df n^ùwfobnsf gsqfgsqwfwkjonfgpw m<vbwfbghjq<wbfioghednfuq bhqdkfjlngkd<f fwfxklxklnboxgf nxl"
+    binned_str = binary_compression(str_to_compress)
+    print(binned_str[0])
+    v = int(binned_str[0],2)
+    binned_v = "{0:b}".format(v)
+    res_str = binary_decompression(binned_v, binned_str[1])
+    print(res_str)
+    print(res_str == str_to_compress)
+    
+
