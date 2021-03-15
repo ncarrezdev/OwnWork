@@ -19,6 +19,7 @@ from Decorators import *
 from Enums      import *
 from EventData  import *
 from Exceptions import *
+from Map        import *
 from OwnObject  import *
 from Point      import *
 from PointData  import *

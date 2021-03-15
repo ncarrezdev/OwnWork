@@ -34,7 +34,11 @@ class Array(TypedData):
         return repr(self.data)
 
 
-    def __init__(self, data:list=[], data_type:E_DATA_TYPE=E_DATA_TYPE.AUTO):
+    def __init__(
+        self, 
+        data:(list)=[], 
+        data_type:E_DATA_TYPE=E_DATA_TYPE.AUTO
+        ):
         TypedData.__init__(self, None, data_type)
         self.__data = []
         if(data != []):

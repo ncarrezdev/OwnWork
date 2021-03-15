@@ -8,7 +8,7 @@ Please read the LICENCE file before making any use of the code below
 class Exceptions():
     @staticmethod
     def TypeException(expected_type, obtained_type):
-        if(len(expected_type) and type(expected_type) == tuple):
+        if(type(expected_type) == tuple):
             expected_type = expected_type[0]
         return Exception('BAD TYPE - Wrong data type : expected '+str(expected_type)+' got '+str(obtained_type))
     @staticmethod

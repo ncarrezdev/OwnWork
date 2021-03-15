@@ -1,0 +1,16 @@
+'''
+This project and its content is under proprietary licence and belongs to Nicolas CARREZ (n.carrez.dev@gmail.com).
+Copyright (c) Nicolas CARREZ 
+
+The code in this repository is NOT free for use.
+Please read the LICENCE file before making any use of the code below
+'''
+This is a template for apps. 
+
+- Core  -- Folder : Contains the main code and files
+  - PY
+  - UI
+- Documentations  -- Folder : Contains the documentations files
+- ThirdParties  -- Folder : Contains the thirdparties files
+- Wheels  -- Folder : Contains the wheels for any dependencies
+- LICENCE  -- File : Contains the licence 
